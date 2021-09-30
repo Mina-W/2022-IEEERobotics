@@ -26,7 +26,7 @@ char buffer[MSGSIZE];
 //===============================================================================
 //  Initialization
 //===============================================================================
-void setup(){
+void accel_setup(){
 Wire.begin();
 Wire.beginTransmission(MPU);
 Wire.write(0x6B);
@@ -37,7 +37,7 @@ Serial.begin(9600);
 //===============================================================================
 //  Main
 //===============================================================================
-void loop(){
+void accel_loop(){
 Wire.beginTransmission(MPU);
 Wire.write(0x3B);
 Wire.endTransmission(false);

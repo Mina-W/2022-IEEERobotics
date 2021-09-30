@@ -9,6 +9,7 @@
  
 void setup()  
 {
+  accel_setup();
   digitalWrite(Relay, RELAY_OFF);      // initialise the relay to off
   pinMode(Relay, OUTPUT);   
   delay(1000); 
@@ -16,6 +17,7 @@ void setup()
  
 void loop() 				// Turn the relay on and off in sequence
 {
+  accel_loop();
   digitalWrite(Relay, RELAY_ON);	// turn the relay on
   delay(3000);               		// wait
  
